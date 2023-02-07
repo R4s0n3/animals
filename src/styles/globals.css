@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@400;700&family=Freckle+Face&family=Orbitron:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "Averia Libre", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+h3{
+  font-family: "Orbitron";
+  font-weight: 700;
+}
+h2, a, button, span{
+  font-family: "Orbitron";
+  font-weight: 400;
+}
+h1{
+  font-family: 'Freckle Face';
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+.spaceship{
+	animation: float 6s ease-in-out infinite;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+main{
+  background-image: url(https://www.transparenttextures.com/patterns/dark-tire.png);
+}
+.content-container::before{
+  border-bottom: 6rem solid rgb(15,23,42);
+  border-left: 0 solid transparent;
+  border-right: 49vw solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: -6rem;
+  width: 0;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.scroll-container{
+  animation: scrollText 20s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: 
+  #ff1744;
+  border-radius: 3px;
+}
