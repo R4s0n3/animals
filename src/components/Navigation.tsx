@@ -16,18 +16,21 @@ export function Navigation({classNames = ""}:Props) {
 
     
 const navItems:NavItem_Type[] = [
-
-    {
-        id:"Story",
-        route:"#story"
-    },
     {
         id:"Products",
         route:"#products"
     },
     {
+        id:"Story",
+        route:"#story"
+    },
+    {
         id:"Roadmap",
         route:"#roadmap"
+    },
+    {
+        id:"Contact",
+        route:"#contact"
     }
 
 ]

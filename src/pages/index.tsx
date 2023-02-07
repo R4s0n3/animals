@@ -41,7 +41,6 @@ const Home: NextPage = () => {
     link:"https://instagram.com"
 },
 ]
-  virtues.length = 4
   const createRoadmap = (data: RoadmapItem, index:number) => {
       const even = (index % 2 === 0);
       return <div className={`flex gap-2 flex-col-reverse items-start justify-center ${even ? "md:flex-row-reverse" : "md:flex-row"}`}>
@@ -86,7 +85,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="content-container mt-24 relative w-full flex flex-col items-center justify-center">
-
+          <div id="products"></div>
           <div className="flex flex-col  md:flex-row w-full gap-1 p-1">
             {products.filter(p => p.type === "single").map(createProducts)}
             <div className="flex-1 bg-slate-900 ">
